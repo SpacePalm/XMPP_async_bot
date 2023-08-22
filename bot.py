@@ -16,7 +16,7 @@ class MyBot(ClientXMPP):
 
         # Настройка SSL-соединения
         context = ssl.create_default_context()
-        context.load_cert_chain(ssl_cert_file)
+        context.load_cert_chain(self.ssl_cert_file)
         self.ssl_context = context
 
     async def start(self, event):
