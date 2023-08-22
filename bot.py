@@ -16,6 +16,7 @@ class MyBot(ClientXMPP):
 
         # Настройка SSL-соединения
         context = ssl.create_default_context()
+        context.ssl_version = ssl.PROTOCOL_SSLv3
         context.load_cert_chain(self.ssl_cert_file)
         self.ssl_context = context
 
